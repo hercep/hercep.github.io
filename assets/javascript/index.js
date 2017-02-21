@@ -3,6 +3,10 @@
 
 $(document).ready(function ($) {
   headerScroll();
+  smoothScroll.init({
+    selectorHeader: ".site-header",
+    selector: 'a[href^="#"]'
+  });
 });
 
 function headerScroll() {
