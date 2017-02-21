@@ -1,19 +1,20 @@
 'use strict';
-"use strict";
+'use strict';
 
 $(document).ready(function ($) {
-  headerFix();
+  headerScroll();
 });
 
-function headerFix() {
-  var header = $("#header");
-
-  header.on("scroll", function (e) {
-
-    if (this.scrollTop > 147) {
-      header.addClass("fixed-header");
+function headerScroll() {
+  $(window).scroll(function () {
+    var siteHeader = $('.site-header');
+    var about = $('#about');
+    if ($(this).scrollTop() > 116) {
+      siteHeader.addClass("fixed-header");
+      about.addClass('fixed-header-about');
     } else {
-      header.removeClass("fixed-header");
+      siteHeader.removeClass("fixed-header");
+      about.removeClass('fixed-header-about');
     }
   });
 }
