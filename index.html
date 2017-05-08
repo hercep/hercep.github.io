@@ -1,23 +1,5 @@
 ---
 layout: default
-services-title-english: Services offered
-services-items-english:
-  - Accounting
-  - Bookeeping
-  - Income Taxes (Personal &amp; Business)
-  - Tax Planning
-  - Payroll (All 50 states)
-  - Financial Advisement
-  - Business License Application &amp; Renewal
-services-title-spanish: Servicios Ofrecidos
-services-items-spanish: 
-  - Contabilidad
-  - Teneduría de libros
-  - Declaración de impuestos (Personal y de Negocios)
-  - Planeacion de impuestos 
-  - Nómina de salarios
-  - Accesoria Financier
-  - Licencia de negocio
 ---
 
 <section id="about" class="about">
@@ -31,17 +13,21 @@ services-items-spanish:
 <section id="services" class="services">
   <div class="wrapper services-wrapper">
     <div class="info">
-        <h2>{{ page.services-title-english }}</h2>
-        <ul>
-        {% for item in page.services-items-english %}
+        {% for item in site.data.english.title %}
+          <h2>{{ item }}</h2>
+        {% endfor %}
+          <ul>
+        {% for item in site.data.english.services %}
           <li> {{ item }} </li>
         {% endfor %}
         </ul>
     </div>
     <div class="info">
-        <h2>{{ page.services-title-spanish }}</h2>
-        <ul>
-        {% for item in page.services-items-spanish %}
+        {% for item in site.data.spanish.title %}
+          <h2>{{ item }}</h2>
+        {% endfor %}
+          <ul>
+        {% for item in site.data.spanish.services %}
           <li> {{ item }} </li>
         {% endfor %}
         </ul>
