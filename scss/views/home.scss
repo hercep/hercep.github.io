@@ -1,0 +1,218 @@
+section {
+  padding: 128px 0;
+}
+.fixed-header-about {
+  &:before {
+    content: "";
+    display: block;
+    height: 124px;
+  }
+  @include media-query($on-palm) {
+    &:before {
+      height: 100px;
+    }
+  }
+}
+.about {
+  display: block;
+  background-color: rgba($text-color, 0.8);
+  position: relative;
+  color: #FFF;
+  transition: all .3s ease-in-out;
+  &:after {
+    content: "";
+    background-image: url('/images/about-bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+  }
+  h1 {
+    font-size: 2.5em;
+    line-height: 1.2em;
+  }
+}
+#services {
+  padding: 80px 0;
+}
+.services-wrapper {
+  display: flex;
+  flex-direction: row;
+  .info {
+    h2 {
+      color: $brand-color;
+    }
+    padding-right: -32px;
+    &:last-of-type {
+      padding-left: 32px;
+      border-left: 1px solid $brand-color;
+    }
+  }
+  @include media-query($on-palm) {
+    flex-direction: column;
+    .info {
+      text-align: center;
+      width: 100%;
+      padding-right: 0;
+      h2 {
+        font-size: 2em;
+      }
+      ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+      }
+      &:first-of-type {
+        padding-bottom: 32px;
+      }
+      &:last-of-type {
+        border: none;
+        border-top: 1px solid $brand-color;
+        padding: 0;
+        padding-top: 32px;
+      }
+    }
+  }
+}
+.contact {
+  display: block;
+  position: relative;
+  color: #FFF;
+  &:after {
+    content: "";
+    background-image: url('/images/contact-bg-2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    @include media-query($on-palm) {
+      background-position: 20% center;
+    }
+  }  
+}
+.contact-wrapper {
+  display: flex;
+  .info {
+    a {
+      color: #FFF;
+      text-decoration: underline;
+    }
+    form {
+      padding-right: 10%;
+      label {
+        font-size: $small-font-size;
+        clear: both;
+      }
+      input, textarea {
+        width: 100%;
+        font-size: $small-font-size;
+        padding: 10px 15px;
+        background-color: rgba(#F7F7F7, 0.1);
+        border: none;
+        border-bottom: 2px solid #F7F7F7;
+        color: #FFF;
+      }
+      textarea {
+        min-height: 150px;
+        margin-bottom: 20px;
+      }
+      input[type="submit"] {
+        background-color: #F7F7F7;
+        border: 1px solid $brand-color;
+        color: $brand-color;
+        font-size: 1em;
+        transition: all .15s ease-in-out;
+        &:hover {
+          cursor: pointer;
+          color: #F7F7F7;
+          background-color: #116063;
+          border: 1px solid #116063;
+        }
+      }
+    }
+  }
+  @include media-query($on-palm) {
+    flex-direction: column;
+    .info{
+      form {
+        padding: 0
+      }
+      h2 {
+        font-size: 2em;
+      }
+      ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+      }
+      &:first-of-type {
+        padding-bottom: 32px;
+      }
+      &:last-of-type {
+        border-top: 1px solid #FFF;
+        padding-top: 32px;
+      }
+    }
+  }
+}
+.info {
+  width: 50%;
+  font-size: 1.3em;
+  @include media-query($on-laptop) {
+    // width: 75%;
+    font-size: 1em;
+  }
+  @include media-query($on-palm) {
+    width: 100%;
+    text-align: center;
+    h1 {
+      font-size: 2em;
+    }
+    p {
+      font-size: 1.2em;
+    }
+  }
+}
+.thanks {
+  .post-content {
+    h1 {
+      font-size: 2.4em;
+    }
+    p {
+      font-size: 1.2em;
+    }
+  }
+}
+.relative{
+  position: relative;
+}
+.quickbooks{
+  display: block;
+  width: 200px;
+  float: right;
+  @include media-query($on-palm) {
+    float: none;
+    clear: both;
+    text-align: center;
+    margin: 40px auto 0 auto;
+  }
+}
+.left {
+  float: left;
+  @include media-query($on-palm) {
+    float: none;
+    margin: 0 auto;
+  }
+}

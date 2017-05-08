@@ -1,0 +1,11 @@
+/*
+The main SCSS file for everything, yep
+*/
+
+@import "main";
+@import "base";
+@import "layout";
+@import "views/header";
+@import "views/footer";
+@import "views/home";
+@import "syntax-highlighting";

@@ -1,0 +1,123 @@
+/**
+ * Site header
+ */
+.site-header {
+    min-height: 56px;
+    background-color: $brand-color;
+    position: relative;
+    box-shadow: 0 3px 10px rgba($text-color, 0.35);
+    overflow: hidden;
+    flex: 0 0 auto;
+    transition: all .3s ease-in-out;
+    @include media-query($on-palm) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+.fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 300;
+}
+.flex-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+.site-title {
+    display: block;
+    width: 200px;
+    padding: 25px 35px 15px 35px;
+    background-color: #fff;
+    height: 100%;
+    min-height: 56px;
+    order: 1
+    svg {
+        min-width: 100%;
+    }
+}
+
+.site-nav {
+    display: block;
+    order: 2;
+    flex: 0 1 auto;
+    .menu-icon {
+        display: none;
+    }
+
+    .page-link {
+        letter-spacing: 0.02em;
+        line-height: $base-line-height;
+        padding: 10px 15px;
+        color: #FFF;
+        display: inline-block;
+        text-decoration: none;
+        transition: all .2s ease-in-out;
+        position: relative;
+
+        &:hover {
+            color: $brand-color;
+            background-color: #FFF;
+        }
+    }
+
+    @include media-query($on-palm) {
+        position: fixed;
+        top: 30px;
+        right: 2.9%;
+        background-color: $background-color;
+        // border-radius: 5px;
+        text-align: right;
+        z-index: 200;
+        box-shadow: 0 3px 10px rgba($text-color, 0.15);
+        transition: all .2s ease-in-out;
+        .menu-icon {
+            display: block;
+            float: right;
+            width: 36px;
+            height: 26px;
+            line-height: 0;
+            padding-top: 10px;
+            text-align: center;
+            
+            > svg {
+                width: 18px;
+                height: 15px;
+
+                path {
+                    fill: $brand-color;
+                }
+            }
+        }
+
+        .trigger {
+            clear: both;
+            display: none;
+        }
+
+        &:hover .trigger {
+            display: block;
+            padding-bottom: 5px;
+        }
+
+        .page-link {
+            display: block;
+            padding: 16px 32px;
+            color: $brand-color;
+            font-size: 1.5em;
+            text-align: center;
+            &:hover {
+                background-color: transparent;
+            }
+
+            &:not(:last-child) {
+                margin-right: 0;
+                border-bottom: 1px solid $brand-color;
+            }
+        }
+    }
+}

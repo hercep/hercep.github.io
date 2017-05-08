@@ -1,0 +1,45 @@
+---
+layout: default
+---
+
+<section id="about" class="about">
+  <div class="wrapper relative">
+    <div class="info left">
+        {% include banner.html %}
+    </div>
+    <img class="quickbooks" src="/images/quickbooks.png" alt="">
+  </div>
+</section>
+<section id="services" class="services">
+  <div class="wrapper services-wrapper">
+    <div class="info">
+        {% include english.html %}
+    </div>
+    <div class="info">
+        {% include spanish.html %}
+    </div>
+  </div>
+</section>
+<section id="contact" class="contact">
+  <div class="wrapper contact-wrapper">
+    <div class="info">
+      <h1>Contact Us</h1>
+      <p><a href="mailto:info@HerCepServices.com?subject=Website%20Contact">info@HerCepServices.com</a> <br> <a href="tel:1-646-207-3460">646-207-3460</a></p>
+    </div>
+    <div class="info">
+      <form action="https://formspree.io/info@hercepservices.com"
+      method="POST">
+        <label for="name">Full Name</label><br>
+        <input type="text" name="name"><br>
+        <label for="name">E-Mail</label><br>
+        <input type="email" name="email"><br>
+        <label for="name">Message</label><br>
+        <textarea name="message"></textarea><br>
+        <input type="hidden" name="_next" value="/thank-you/" />
+        <input type="hidden" name="_subject" value="New Website Contact" />
+        <input type="text" name="_gotcha" style="display:none" />
+        <input type="submit" value="Send">
+      </form>
+    </div>
+  </div>
+</section>
