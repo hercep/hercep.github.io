@@ -5,7 +5,12 @@ layout: default
 <section id="about" class="about">
   <div class="wrapper relative">
     <div class="info left">
-        {% include banner.html %}
+        {% for item in site.data.banner.Title %}
+          <h1>{{ item }}</h1>
+        {% endfor %}
+        {% for item in site.data.banner.Subtitle %}
+          <p>{{ item }}</p>
+        {% endfor %}
     </div>
     <img class="quickbooks" src="/images/quickbooks.png" alt="">
   </div>
